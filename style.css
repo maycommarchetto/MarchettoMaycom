@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/assets/bg-desktop.jpg);
+  --bg-url: url(./assets/bg-desktop.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surfece-color-hover: rgba(0, 0, 0, 0.02);
@@ -16,7 +16,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(assets/assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --strock-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surfece-color-hover: rgba(0, 0, 0, 0.02);
@@ -76,16 +76,15 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
-animation: slide-back .2s;
-
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  animation:  slide-in 0.4s forwards;
+  animation: slide-in 0.4s forwards;
 }
 
-#switch button:hover{
-  outline: 8px solid var(--highlight-color)
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -109,22 +108,21 @@ ul {
   padding: 24px 0;
 }
 
-ul li {
+ul li a {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   padding: 16px 24px;
 
   background: var(--surface-color);
-  border: 1px solid var(--strock-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
   text-decoration: none;
-
   font-weight: 500;
 
   transition: background 0.2s;
@@ -166,28 +164,28 @@ footer {
 }
 
 /* media queries*/
-  @media ( min-width: 700px){
-      :root {
-        --ng-url: url(./assets/assets/bg-desktop.jpg)
-      }
-      .light {
-        --bg-url: url(assets/assets/bg-mobile-light.jpg)
-      }
+@media (min-width: 700px) {
+  :root {
+    --ng-url: url(./assets/bg-desktop.jpg);
   }
+  .light {
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+  }
+}
 
 @keyframes slide-in {
-from {
-  left: 0;
-}
-to {
-  left: 50%;
-}
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
 @keyframes slide-back {
   from {
     left: 50%;
-  } 
+  }
   to {
     left: 0;
   }
